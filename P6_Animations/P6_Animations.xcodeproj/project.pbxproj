@@ -11,6 +11,10 @@
 		C572D98F2A35EDB0005F242A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C572D98E2A35EDB0005F242A /* ContentView.swift */; };
 		C572D9912A35EDB1005F242A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C572D9902A35EDB1005F242A /* Assets.xcassets */; };
 		C572D9952A35EDB1005F242A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C572D9942A35EDB1005F242A /* Preview Assets.xcassets */; };
+		C59E06062A36008100A95B07 /* ImplicitAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E06052A36008100A95B07 /* ImplicitAnimations.swift */; };
+		C59E06082A36009200A95B07 /* CustomizeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E06072A36009200A95B07 /* CustomizeAnimations.swift */; };
+		C59E060A2A3600AD00A95B07 /* ExpicitAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E06092A3600AD00A95B07 /* ExpicitAnimations.swift */; };
+		C59E060C2A3600BE00A95B07 /* AnimatingBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E060B2A3600BE00A95B07 /* AnimatingBindings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		C572D9902A35EDB1005F242A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C572D9922A35EDB1005F242A /* P6_Animations.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = P6_Animations.entitlements; sourceTree = "<group>"; };
 		C572D9942A35EDB1005F242A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C59E06052A36008100A95B07 /* ImplicitAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplicitAnimations.swift; sourceTree = "<group>"; };
+		C59E06072A36009200A95B07 /* CustomizeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeAnimations.swift; sourceTree = "<group>"; };
+		C59E06092A3600AD00A95B07 /* ExpicitAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpicitAnimations.swift; sourceTree = "<group>"; };
+		C59E060B2A3600BE00A95B07 /* AnimatingBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingBindings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 		C572D98B2A35EDB0005F242A /* P6_Animations */ = {
 			isa = PBXGroup;
 			children = (
+				C59E06042A36006D00A95B07 /* Practice */,
 				C572D98C2A35EDB0005F242A /* P6_AnimationsApp.swift */,
 				C572D98E2A35EDB0005F242A /* ContentView.swift */,
 				C572D9902A35EDB1005F242A /* Assets.xcassets */,
@@ -67,6 +76,17 @@
 				C572D9942A35EDB1005F242A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C59E06042A36006D00A95B07 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				C59E06052A36008100A95B07 /* ImplicitAnimations.swift */,
+				C59E06072A36009200A95B07 /* CustomizeAnimations.swift */,
+				C59E060B2A3600BE00A95B07 /* AnimatingBindings.swift */,
+				C59E06092A3600AD00A95B07 /* ExpicitAnimations.swift */,
+			);
+			path = Practice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59E06062A36008100A95B07 /* ImplicitAnimations.swift in Sources */,
 				C572D98F2A35EDB0005F242A /* ContentView.swift in Sources */,
+				C59E060C2A3600BE00A95B07 /* AnimatingBindings.swift in Sources */,
+				C59E06082A36009200A95B07 /* CustomizeAnimations.swift in Sources */,
 				C572D98D2A35EDB0005F242A /* P6_AnimationsApp.swift in Sources */,
+				C59E060A2A3600AD00A95B07 /* ExpicitAnimations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
