@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C505755C2A3B3E9800891906 /* AnimationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C505755B2A3B3E9800891906 /* AnimationStack.swift */; };
+		C505755E2A3B40D400891906 /* AnimatingGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = C505755D2A3B40D400891906 /* AnimatingGestures.swift */; };
+		C50575602A3BE50000891906 /* ViewTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C505755F2A3BE50000891906 /* ViewTransitions.swift */; };
+		C50575622A3BEFEE00891906 /* CustomTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50575612A3BEFEE00891906 /* CustomTransitions.swift */; };
 		C572D98D2A35EDB0005F242A /* P6_AnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C572D98C2A35EDB0005F242A /* P6_AnimationsApp.swift */; };
 		C572D98F2A35EDB0005F242A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C572D98E2A35EDB0005F242A /* ContentView.swift */; };
 		C572D9912A35EDB1005F242A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C572D9902A35EDB1005F242A /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C505755B2A3B3E9800891906 /* AnimationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationStack.swift; sourceTree = "<group>"; };
+		C505755D2A3B40D400891906 /* AnimatingGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingGestures.swift; sourceTree = "<group>"; };
+		C505755F2A3BE50000891906 /* ViewTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTransitions.swift; sourceTree = "<group>"; };
+		C50575612A3BEFEE00891906 /* CustomTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitions.swift; sourceTree = "<group>"; };
 		C572D9892A35EDB0005F242A /* P6_Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P6_Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C572D98C2A35EDB0005F242A /* P6_AnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P6_AnimationsApp.swift; sourceTree = "<group>"; };
 		C572D98E2A35EDB0005F242A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +93,10 @@
 				C59E06072A36009200A95B07 /* CustomizeAnimations.swift */,
 				C59E060B2A3600BE00A95B07 /* AnimatingBindings.swift */,
 				C59E06092A3600AD00A95B07 /* ExpicitAnimations.swift */,
+				C505755B2A3B3E9800891906 /* AnimationStack.swift */,
+				C505755D2A3B40D400891906 /* AnimatingGestures.swift */,
+				C505755F2A3BE50000891906 /* ViewTransitions.swift */,
+				C50575612A3BEFEE00891906 /* CustomTransitions.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -163,8 +175,12 @@
 				C572D98F2A35EDB0005F242A /* ContentView.swift in Sources */,
 				C59E060C2A3600BE00A95B07 /* AnimatingBindings.swift in Sources */,
 				C59E06082A36009200A95B07 /* CustomizeAnimations.swift in Sources */,
+				C505755E2A3B40D400891906 /* AnimatingGestures.swift in Sources */,
+				C505755C2A3B3E9800891906 /* AnimationStack.swift in Sources */,
 				C572D98D2A35EDB0005F242A /* P6_AnimationsApp.swift in Sources */,
+				C50575602A3BE50000891906 /* ViewTransitions.swift in Sources */,
 				C59E060A2A3600AD00A95B07 /* ExpicitAnimations.swift in Sources */,
+				C50575622A3BEFEE00891906 /* CustomTransitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     private let maxQuestions = 8
+    
+    // Animation state
+    @State private var pressedFlag: Int? = nil
 
     // Question state
     @State private var correctAnswer = Int.random(in: 0...2)
@@ -50,10 +53,17 @@ struct ContentView: View {
                     
                     ForEach(0..<3) { number in
                         Button {
+                            withAnimation {
+                                pressedFlag = number
+                            }
                             flagTapped(number)
                         } label: {
                             FlagImage(image: countries[number])
                         }
+                        .rotation3DEffect(number == pressedFlag ? .degrees(360) : .degrees(0), axis: (x: 0, y: 1, z: 0))
+                        .rotation3DEffect(pressedFlag != nil && number != pressedFlag ? .degrees(360) : .degrees(0), axis: (x: 1, y: 0, z: 0))
+                        .scaleEffect(pressedFlag != nil && number != pressedFlag ? 0.5 : 1.0)
+                        .opacity(pressedFlag == nil || number == pressedFlag ? 1.0 : 0.25)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -91,6 +101,9 @@ struct ContentView: View {
     }
     
     func askQuestion() {
+        // Reset animation state
+        pressedFlag = nil
+        
         if (numQuestions < maxQuestions) {
             numQuestions += 1
             countries.shuffle()
