@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C54EFE8F2B7ED6CE0057A2A7 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54EFE8E2B7ED6CE0057A2A7 /* View+Extensions.swift */; };
 		C577FEFF2B7C3E8B00E7F4C0 /* P1_WeSplit_2024App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C577FEFE2B7C3E8B00E7F4C0 /* P1_WeSplit_2024App.swift */; };
 		C577FF012B7C3E8B00E7F4C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C577FF002B7C3E8B00E7F4C0 /* ContentView.swift */; };
 		C577FF032B7C3E8D00E7F4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C577FF022B7C3E8D00E7F4C0 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C54EFE8E2B7ED6CE0057A2A7 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		C577FEFB2B7C3E8B00E7F4C0 /* P1_WeSplit_2024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P1_WeSplit_2024.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C577FEFE2B7C3E8B00E7F4C0 /* P1_WeSplit_2024App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1_WeSplit_2024App.swift; sourceTree = "<group>"; };
 		C577FF002B7C3E8B00E7F4C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C54EFE8C2B7ED6B30057A2A7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C54EFE8D2B7ED6BA0057A2A7 /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C54EFE8D2B7ED6BA0057A2A7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C54EFE8E2B7ED6CE0057A2A7 /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C577FEF22B7C3E8B00E7F4C0 = {
 			isa = PBXGroup;
 			children = (
@@ -59,7 +77,8 @@
 		C577FEFD2B7C3E8B00E7F4C0 /* P1_WeSplit_2024 */ = {
 			isa = PBXGroup;
 			children = (
-				C577FF0C2B7C5D6200E7F4C0 /* Learning */,
+				C54EFE8C2B7ED6B30057A2A7 /* Shared */,
+				C577FF0C2B7C5D6200E7F4C0 /* Practice */,
 				C577FEFE2B7C3E8B00E7F4C0 /* P1_WeSplit_2024App.swift */,
 				C577FF002B7C3E8B00E7F4C0 /* ContentView.swift */,
 				C577FF022B7C3E8D00E7F4C0 /* Assets.xcassets */,
@@ -76,7 +95,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C577FF0C2B7C5D6200E7F4C0 /* Learning */ = {
+		C577FF0C2B7C5D6200E7F4C0 /* Practice */ = {
 			isa = PBXGroup;
 			children = (
 				C577FF0F2B7C5DB800E7F4C0 /* FormView.swift */,
@@ -84,7 +103,7 @@
 				C577FF152B7C605A00E7F4C0 /* BindingStateToUxView.swift */,
 				C577FF172B7C615D00E7F4C0 /* LoopsView.swift */,
 			);
-			path = Learning;
+			path = Practice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +179,7 @@
 				C577FF182B7C615D00E7F4C0 /* LoopsView.swift in Sources */,
 				C577FF102B7C5DB800E7F4C0 /* FormView.swift in Sources */,
 				C577FF142B7C5FA100E7F4C0 /* ProgramStateView.swift in Sources */,
+				C54EFE8F2B7ED6CE0057A2A7 /* View+Extensions.swift in Sources */,
 				C577FF012B7C3E8B00E7F4C0 /* ContentView.swift in Sources */,
 				C577FEFF2B7C3E8B00E7F4C0 /* P1_WeSplit_2024App.swift in Sources */,
 				C577FF162B7C605A00E7F4C0 /* BindingStateToUxView.swift in Sources */,
