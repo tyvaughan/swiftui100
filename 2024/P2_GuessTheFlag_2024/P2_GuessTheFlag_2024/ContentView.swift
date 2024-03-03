@@ -20,6 +20,7 @@ struct ContentView: View {
     // Question state
     @State private var countries = K.countries.shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
+    @State private var selectedAnswer: Int? = nil
     
     // Question alert state
     @State private var showingQuestionAlert = false
@@ -55,7 +56,13 @@ struct ContentView: View {
                     .clipShape(.rect(cornerRadius: 20))
                     
                     ForEach(0..<3) { number in
-                        FlagView(countries: $countries, number: number, handler: flagTapped)
+                        FlagView(
+                            countries: $countries,
+                            selectedAnswer: $selectedAnswer,
+                            number: number,
+                            handler: flagTapped,
+                            isAnswer: number == correctAnswer
+                        )
                     }
                 }
                 
@@ -98,6 +105,7 @@ struct ContentView: View {
         Updates game state to show the next question or end the game
      */
     func nextQuestion() -> Void {
+        selectedAnswer = nil
         if questionNumber == maxQuestions {
             showingGameAlert = true
         } else {
@@ -111,6 +119,7 @@ struct ContentView: View {
         Handles when a flag button is tapped
      */
     func flagTapped(_ number: Int) -> Void {
+        selectedAnswer = number
         if number == correctAnswer {
             questionAlertTitle = "Correct"
             questionAlertMessage = ""
@@ -121,6 +130,14 @@ struct ContentView: View {
         }
         questionNumber += 1
         showingQuestionAlert = true
+    }
+
+    func getOpacityAmount(_ isOpaque: Bool) -> Double {
+        isOpaque ? 1.0 : 0.5
+    }
+    
+    func getSpinAmount(_ showSpin: Bool) -> Double {
+        showSpin ? 360 : 0
     }
     
 }
