@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C534B8E12B990CDA00D69124 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534B8E02B990CDA00D69124 /* HomeView.swift */; };
+		C534B8E32B990D0600D69124 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534B8E22B990D0600D69124 /* HomeView2.swift */; };
 		C55BDD542B96875A00FDFEE8 /* ScrollingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55BDD532B96875A00FDFEE8 /* ScrollingData.swift */; };
 		C55BDD572B96A15F00FDFEE8 /* NavigationLinkViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55BDD562B96A15F00FDFEE8 /* NavigationLinkViews.swift */; };
 		C55BDD592B96A2AD00FDFEE8 /* HeirarchicalCodableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55BDD582B96A2AD00FDFEE8 /* HeirarchicalCodableData.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C534B8E02B990CDA00D69124 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C534B8E22B990D0600D69124 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		C55BDD532B96875A00FDFEE8 /* ScrollingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingData.swift; sourceTree = "<group>"; };
 		C55BDD562B96A15F00FDFEE8 /* NavigationLinkViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkViews.swift; sourceTree = "<group>"; };
 		C55BDD582B96A2AD00FDFEE8 /* HeirarchicalCodableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeirarchicalCodableData.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 			children = (
 				C5AF92CE2B97AE38005532CE /* AstronautView.swift */,
 				C5AF92C92B97A981005532CE /* MissionView.swift */,
+				C534B8E02B990CDA00D69124 /* HomeView.swift */,
+				C534B8E22B990D0600D69124 /* HomeView2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 				C5AF92C22B97A054005532CE /* Bundle+Extensions.swift in Sources */,
 				C5AF92D12B97B203005532CE /* CrewScroller.swift in Sources */,
 				C5AF92CA2B97A981005532CE /* MissionView.swift in Sources */,
+				C534B8E32B990D0600D69124 /* HomeView2.swift in Sources */,
+				C534B8E12B990CDA00D69124 /* HomeView.swift in Sources */,
 				C5AF92BF2B97A00E005532CE /* Astronaut.swift in Sources */,
 				C57D56432B968212004D558D /* P8_Moonshot_2024App.swift in Sources */,
 				C5AF92D62B97B453005532CE /* MissionCard.swift in Sources */,

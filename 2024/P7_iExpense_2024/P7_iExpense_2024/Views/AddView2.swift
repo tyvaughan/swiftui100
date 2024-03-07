@@ -1,18 +1,18 @@
 //
-//  AddView.swift
+//  AddView2.swift
 //  P7_iExpense_2024
 //
-//  Created by  Ty Vaughan on 3/3/24.
+//  Created by  Ty Vaughan on 3/6/24.
 //
 
 import SwiftUI
 
-struct AddView: View {
+struct AddView2: View {
     var expenses: Expenses
     
     @Environment(\.dismiss) var dismiss
     
-    @State private var name = "Dinner"
+    @State private var name = "Expense name..."
     @State private var type = "Personal"
     @State private var amount = 0.0
     
@@ -21,8 +21,6 @@ struct AddView: View {
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Name", text: $name)
-                
                 Picker("Type", selection: $type) {
                     ForEach(types, id: \.self) {
                         Text($0)
@@ -32,7 +30,8 @@ struct AddView: View {
                 TextField("Amount", value: $amount, format: .currency(code: "USD"))
                     .keyboardType(.decimalPad)
             }
-            .navigationTitle("Add new expense")
+            .navigationTitle($name)
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
@@ -74,5 +73,5 @@ struct AddView: View {
 }
 
 #Preview {
-    AddView(expenses: Expenses())
+    AddView2(expenses: Expenses())
 }

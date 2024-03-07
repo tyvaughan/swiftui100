@@ -13,9 +13,8 @@ import Foundation
  To reference CrewRole, we'd use Mission.CrewRole
  */
 
-struct Mission: Codable, Identifiable {
-    
-    struct CrewRole: Codable {
+struct Mission: Codable, Identifiable, Hashable, Equatable {
+    struct CrewRole: Codable, Hashable, Equatable {
         let name: String
         let role: String
     }
