@@ -5,10 +5,11 @@
 //  Created by  Ty Vaughan on 3/18/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct UsersView: View {
-    @Binding var users: [User]
+    @Query(sort: \User.name) var users: [User]
 
     var body: some View {
         List {
@@ -30,7 +31,14 @@ struct UsersView: View {
 }
 
 #Preview {
-    NavigationStack {
-        UsersView(users: .constant([User.example, User.example, User.example]))
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: User.self, configurations: config)
+        return NavigationStack {
+            UsersView()
+                .modelContainer(container)
+        }
+    } catch {
+        return Text("Failed to create container: \(error.localizedDescription)")
     }
 }

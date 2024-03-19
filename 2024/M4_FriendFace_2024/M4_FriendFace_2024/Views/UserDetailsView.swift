@@ -5,6 +5,7 @@
 //  Created by  Ty Vaughan on 3/18/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct UserDetailsView: View {
@@ -62,7 +63,14 @@ struct UserDetailsView: View {
 }
 
 #Preview {
-    NavigationStack {
-        UserDetailsView(user: User.example)
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: User.self, configurations: config)
+        return NavigationStack {
+            UserDetailsView(user: User.example)
+                .modelContainer(container)
+        }
+    } catch {
+        return Text("Failed to create container: \(error.localizedDescription)")
     }
 }

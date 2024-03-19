@@ -5,6 +5,7 @@
 //  Created by  Ty Vaughan on 3/18/24.
 //
 
+import SwiftData
 import SwiftUI
 
 @main
@@ -13,5 +14,9 @@ struct M4_FriendFace_2024App: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [
+            User.self,
+            Friend.self
+        ], isAutosaveEnabled: false)
     }
 }

@@ -5,15 +5,18 @@
 //  Created by  Ty Vaughan on 3/18/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    @State var users = [User]()
+    @Environment(\.modelContext) var modelContext
+    @Query() var users: [User]
+    
     @State var path = NavigationPath()
     
     var body: some View {
         NavigationStack(path: $path) {
-            UsersView(users: $users)
+            UsersView()
         }
         .task {
             await loadData()
@@ -21,11 +24,41 @@ struct ContentView: View {
     }
     
     func loadData() async -> Void {
-        users = await UsersService().loadUsers()
+        // Check if users have already been loaded
+        if users.count != 0 {
+            print("Users have already been loaded")
+            return
+        }
+
+        // Load users
+        _ = await UsersService().loadUsers(modelContext: modelContext)
+        
+        // Save the users in a single transaction
+//        try? modelContext.transaction {
+//            for user in loadedUsers {
+//                modelContext.insert(user)
+//            }
+//            do {
+//                try modelContext.save()
+//            } catch {
+//                print("Failed to save users")
+//            }
+//        }
     }
 
 }
 
 #Preview {
-    ContentView()
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(
+            for: User.self, Friend.self,
+            configurations: config
+        )
+        container.mainContext.autosaveEnabled = false
+        return ContentView()
+            .modelContainer(container)
+    } catch {
+        return Text("Failed to create container: \(error.localizedDescription)")
+    }
 }
