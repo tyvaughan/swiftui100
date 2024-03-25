@@ -22,16 +22,18 @@ struct ShowEmptyStatesWithContentUnavailable: View {
             description: Text("You don't have any saved snipped yets.")
         )
         
-        // We can take full control over the UI
-        ContentUnavailableView {
-            Label("No snippets", systemImage: "swift")
-        } description: {
-            Text("You don't have any saved snippets yet.")
-        } actions: {
-            Button("Create snippet") {
-                // create a snippet
+        List {
+            // We can take full control over the UI
+            ContentUnavailableView {
+                Label("No snippets", systemImage: "swift")
+            } description: {
+                Text("You don't have any saved snippets yet.")
+            } actions: {
+                Button("Create snippet") {
+                    // create a snippet
+                }
+                .buttonStyle(.borderedProminent)
             }
-            .buttonStyle(.borderedProminent)
         }
     }
 }
