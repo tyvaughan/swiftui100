@@ -6,12 +6,12 @@
 //
 
 import MapKit
+import _MapKit_SwiftUI
 import SwiftUI
 
 struct ContentView: View {
     
-    @State private var locations = [Location]()
-    @State private var selectedPlace: Location?
+    @State private var viewModel = ViewModel()
     
     let startPosition = MapCameraPosition.region(
         MKCoordinateRegion(
@@ -21,44 +21,63 @@ struct ContentView: View {
     )
     
     var body: some View {
-        MapReader { proxy in
-            Map(initialPosition: startPosition, interactionModes: [.pan, .zoom]) {
-                ForEach(locations) { location in
-                    Annotation(location.name, coordinate: location.coordinate) {
-                        Image(systemName: "star.circle")
-                            .resizable()
-                            .foregroundColor(.red)
-                            .frame(width: 32, height: 32)
-                            .background(.white)
-                            .clipShape(.circle)
-                            .onLongPressGesture {
-                                selectedPlace = location
+        if viewModel.isUnlocked {
+            ZStack {
+                MapReader { proxy in
+                    Map(initialPosition: startPosition, interactionModes: [.pan, .zoom]) {
+                        ForEach(viewModel.locations) { location in
+                            Annotation(location.name, coordinate: location.coordinate) {
+                                Image(systemName: "star.circle")
+                                    .resizable()
+                                    .foregroundColor(.red)
+                                    .frame(width: 32, height: 32)
+                                    .background(.white)
+                                    .clipShape(.circle)
+                                    .onLongPressGesture {
+                                        viewModel.selectedPlace = location
+                                    }
                             }
+                        }
+                    }
+                    .mapStyle(viewModel.mapStyleValue)
+                    .onTapGesture { position in
+                        if let coordinate = proxy.convert(position, from: .local) {
+                            viewModel.addLocation(at: coordinate)
+                        }
+                    }
+                    .sheet(item: $viewModel.selectedPlace) { place in
+                        LocationEditView(location: place, onSave: viewModel.saveLocation)
                     }
                 }
+                
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        Picker("Map style", selection: $viewModel.mapStyle) {
+                            Image(systemName: "map").tag("imagery")
+                            Image(systemName: "road.lanes").tag("standard")
+                        }
+                        .pickerStyle(.segmented)
+                    }
+                    Spacer()
+                }
+                
             }
-                .onTapGesture { position in
-                    if let coordinate = proxy.convert(position, from: .local) {
-                        addLocation(at: coordinate)
-                    }
-                }
-                .sheet(item: $selectedPlace) { place in
-                    LocationEditView(location: place, onSave: saveLocation)
+        } else {
+            Button("Unlock Places", action: viewModel.authenticate)
+                .padding()
+                .background(.blue)
+                .foregroundStyle(.white)
+                .clipShape(.capsule)
+                .alert(viewModel.alertTitle, isPresented: $viewModel.showAlert) {
+                    // no actions
+                } message: {
+                    Text(viewModel.alertMessage)
                 }
         }
     }
-    
-    func addLocation(at coordinate: CLLocationCoordinate2D) -> Void {
-        let newLocation = Location(id: UUID(), name: "New location", description: "Description", latitude: coordinate.latitude, longitude: coordinate.longitude)
-        locations.append(newLocation)
-    }
-    
-    func saveLocation(_ location: Location) -> Void {
-        if let index = locations.firstIndex(of: location) {
-            locations.remove(at: index)
-            locations.insert(location, at: index)
-        }
-    }
+
 }
 
 #Preview {

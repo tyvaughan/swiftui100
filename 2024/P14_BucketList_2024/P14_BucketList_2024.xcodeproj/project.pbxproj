@@ -17,6 +17,13 @@
 		C5A2A2012BAE16D800BBA627 /* SwitchViewStatesWithEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2A2002BAE16D800BBA627 /* SwitchViewStatesWithEnums.swift */; };
 		C5A2A2032BAE187500BBA627 /* IntegratingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2A2022BAE187500BBA627 /* IntegratingMapKit.swift */; };
 		C5A2A2052BAE25DF00BBA627 /* TouchAndFaceId.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2A2042BAE25DF00BBA627 /* TouchAndFaceId.swift */; };
+		C5CB22322BB1E64A006BAE88 /* WikipediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB22312BB1E64A006BAE88 /* WikipediaService.swift */; };
+		C5CB22342BB1E65A006BAE88 /* WikipediaPlaceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB22332BB1E65A006BAE88 /* WikipediaPlaceResponse.swift */; };
+		C5CB22372BB1E815006BAE88 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB22362BB1E815006BAE88 /* LoadingState.swift */; };
+		C5CB22392BB1EBE2006BAE88 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB22382BB1EBE2006BAE88 /* ApiResponse.swift */; };
+		C5CB223B2BB1EC7B006BAE88 /* ApiStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB223A2BB1EC7B006BAE88 /* ApiStatus.swift */; };
+		C5CB223E2BB1F26F006BAE88 /* ContentView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CB223D2BB1F26F006BAE88 /* ContentView+ViewModel.swift */; };
+		C5CE247C2BB2605800E4B252 /* LocationEditView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CE247B2BB2605800E4B252 /* LocationEditView+ViewModel.swift */; };
 		C5ED69762BB0FD9000F96CDB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ED69752BB0FD9000F96CDB /* Location.swift */; };
 		C5ED69782BB1020600F96CDB /* LocationEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ED69772BB1020600F96CDB /* LocationEditView.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +40,13 @@
 		C5A2A2002BAE16D800BBA627 /* SwitchViewStatesWithEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewStatesWithEnums.swift; sourceTree = "<group>"; };
 		C5A2A2022BAE187500BBA627 /* IntegratingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingMapKit.swift; sourceTree = "<group>"; };
 		C5A2A2042BAE25DF00BBA627 /* TouchAndFaceId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchAndFaceId.swift; sourceTree = "<group>"; };
+		C5CB22312BB1E64A006BAE88 /* WikipediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaService.swift; sourceTree = "<group>"; };
+		C5CB22332BB1E65A006BAE88 /* WikipediaPlaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPlaceResponse.swift; sourceTree = "<group>"; };
+		C5CB22362BB1E815006BAE88 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		C5CB22382BB1EBE2006BAE88 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		C5CB223A2BB1EC7B006BAE88 /* ApiStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStatus.swift; sourceTree = "<group>"; };
+		C5CB223D2BB1F26F006BAE88 /* ContentView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+ViewModel.swift"; sourceTree = "<group>"; };
+		C5CE247B2BB2605800E4B252 /* LocationEditView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationEditView+ViewModel.swift"; sourceTree = "<group>"; };
 		C5ED69752BB0FD9000F96CDB /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C5ED69772BB1020600F96CDB /* LocationEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,8 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				C5A2A1F82BAE077500BBA627 /* Practice */,
+				C5CB22352BB1E809006BAE88 /* Enums */,
 				C5A2A1FD2BAE0D5700BBA627 /* Extensions */,
 				C5ED69742BB0F6E300F96CDB /* Model */,
+				C5CB22302BB1E635006BAE88 /* Services */,
+				C5CB223C2BB1F244006BAE88 /* ViewModels */,
 				C5ED69732BB0F6D900F96CDB /* Views */,
 				C5A2A1EA2BAE049A00BBA627 /* P14_BucketList_2024App.swift */,
 				C5A2A1EC2BAE049A00BBA627 /* ContentView.swift */,
@@ -107,6 +124,32 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C5CB22302BB1E635006BAE88 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB22312BB1E64A006BAE88 /* WikipediaService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C5CB22352BB1E809006BAE88 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB22362BB1E815006BAE88 /* LoadingState.swift */,
+				C5CB223A2BB1EC7B006BAE88 /* ApiStatus.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		C5CB223C2BB1F244006BAE88 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C5CB223D2BB1F26F006BAE88 /* ContentView+ViewModel.swift */,
+				C5CE247B2BB2605800E4B252 /* LocationEditView+ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C5ED69732BB0F6D900F96CDB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				C5ED69752BB0FD9000F96CDB /* Location.swift */,
+				C5CB22332BB1E65A006BAE88 /* WikipediaPlaceResponse.swift */,
+				C5CB22382BB1EBE2006BAE88 /* ApiResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,9 +238,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5CE247C2BB2605800E4B252 /* LocationEditView+ViewModel.swift in Sources */,
+				C5CB22322BB1E64A006BAE88 /* WikipediaService.swift in Sources */,
 				C5A2A1FA2BAE078C00BBA627 /* ConformToComparable.swift in Sources */,
+				C5CB22342BB1E65A006BAE88 /* WikipediaPlaceResponse.swift in Sources */,
+				C5CB22392BB1EBE2006BAE88 /* ApiResponse.swift in Sources */,
 				C5A2A2052BAE25DF00BBA627 /* TouchAndFaceId.swift in Sources */,
+				C5CB223E2BB1F26F006BAE88 /* ContentView+ViewModel.swift in Sources */,
+				C5CB223B2BB1EC7B006BAE88 /* ApiStatus.swift in Sources */,
 				C5A2A2012BAE16D800BBA627 /* SwitchViewStatesWithEnums.swift in Sources */,
+				C5CB22372BB1E815006BAE88 /* LoadingState.swift in Sources */,
 				C5A2A1ED2BAE049A00BBA627 /* ContentView.swift in Sources */,
 				C5ED69762BB0FD9000F96CDB /* Location.swift in Sources */,
 				C5A2A1FF2BAE0D6A00BBA627 /* FileManager+Extensions.swift in Sources */,
@@ -339,7 +391,7 @@
 				DEVELOPMENT_TEAM = KZWJGZQGWZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -369,7 +421,7 @@
 				DEVELOPMENT_TEAM = KZWJGZQGWZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
