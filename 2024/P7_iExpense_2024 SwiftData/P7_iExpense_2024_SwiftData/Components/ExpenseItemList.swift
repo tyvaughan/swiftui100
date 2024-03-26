@@ -25,6 +25,9 @@ struct ExpenseItemList: View {
                     Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                         .foregroundColor(item.amountColor)
                 }
+                .accessibilityElement()
+                .accessibilityLabel("\(item.name), \(getCurrencyLabel(for: item.amount))")
+                .accessibilityHint("\(item.type) expense")
             }
             .onDelete(perform: removeItems)
         }
@@ -40,6 +43,14 @@ struct ExpenseItemList: View {
         for index in indexSet {
             modelContext.delete(items[index])
         }
+    }
+    
+    func getCurrencyLabel(for amount: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.usesGroupingSeparator = true
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        return formatter.string(from: NSNumber(value: amount))!
     }
 }
 

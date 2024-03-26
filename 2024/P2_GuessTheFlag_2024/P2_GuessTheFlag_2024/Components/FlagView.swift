@@ -34,6 +34,7 @@ struct FlagView: View {
         )
         .scaleEffect(selectedAnswer == nil || selectedAnswer == number ? 1.0 : 0.75)
         .animation(.default, value: selectedAnswer)
+        .accessibilityLabel(K.countryLabels[countries[number], default: "Unknown flag"])
     }
 
 }
