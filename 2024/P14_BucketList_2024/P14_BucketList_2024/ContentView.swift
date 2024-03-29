@@ -16,7 +16,7 @@ struct ContentView: View {
     let startPosition = MapCameraPosition.region(
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 56, longitude: -3),
-            span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
+            span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
         )
     )
     
