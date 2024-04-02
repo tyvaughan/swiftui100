@@ -26,7 +26,7 @@ struct ExpenseItemList: View {
                         .foregroundColor(item.amountColor)
                 }
                 .accessibilityElement()
-                .accessibilityLabel("\(item.name), \(getCurrencyLabel(for: item.amount))")
+                .accessibilityLabel("\(item.name), \(getCurrencyLabel(for: item.amount)Compone)")
                 .accessibilityHint("\(item.type) expense")
             }
             .onDelete(perform: removeItems)
