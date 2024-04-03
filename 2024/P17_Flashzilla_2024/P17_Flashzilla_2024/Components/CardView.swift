@@ -78,6 +78,7 @@ struct CardView: View {
     }
     
     func resetOffset() -> Void {
+        print("offset reset for \(card.id)")
         offset = .zero
     }
 }

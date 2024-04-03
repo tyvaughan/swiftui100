@@ -46,6 +46,8 @@ struct HomeView: View {
                             .stacked(at: index(of: card), in: cards.count)
                             .allowsHitTesting(index(of: card) == cards.count - 1)
                             .accessibilityHidden(index(of: card) < cards.count - 1)
+                        Text("\(card.id.uuidString)")
+                            .background(.white)
                     }
                 }
                 .allowsHitTesting(timeRemaining > 0)
@@ -165,11 +167,12 @@ struct HomeView: View {
     }
     
     func loadData() {
-        if let data = UserDefaults.standard.data(forKey: "Cards") {
-            if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
-                cards = decoded
-            }
-        }
+        cards = CardService.load()
+//        if let data = UserDefaults.standard.data(forKey: "Cards") {
+//            if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
+//                cards = decoded
+//            }
+//        }
     }
 }
 

@@ -68,17 +68,19 @@ struct EditCardsView: View {
     // MARK: UserDefaults methods
     
     func loadData() -> Void {
-        if let data = UserDefaults.standard.data(forKey: "Cards") {
-            if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
-                cards = decoded
-            }
-        }
+        cards = CardService.load()
+//        if let data = UserDefaults.standard.data(forKey: "Cards") {
+//            if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
+//                cards = decoded
+//            }
+//        }
     }
     
     func saveData() -> Void {
-        if let data = try? JSONEncoder().encode(cards) {
-            UserDefaults.standard.set(data, forKey: "Cards")
-        }
+        CardService.save(cards: cards)
+//        if let data = try? JSONEncoder().encode(cards) {
+//            UserDefaults.standard.set(data, forKey: "Cards")
+//        }
     }
     
     // MARK: Helper methods
