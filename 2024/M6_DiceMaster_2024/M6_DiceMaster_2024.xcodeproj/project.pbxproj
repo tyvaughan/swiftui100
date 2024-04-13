@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C51AB3522BBF88B20063BB01 /* PageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3512BBF88B20063BB01 /* PageWrapper.swift */; };
+		C51AB3552BC035530063BB01 /* DiceSetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3542BC035530063BB01 /* DiceSetService.swift */; };
+		C51AB3572BC071510063BB01 /* DiceListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3562BC071510063BB01 /* DiceListCard.swift */; };
+		C51AB3592BC0757C0063BB01 /* ScrollPageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3582BC0757C0063BB01 /* ScrollPageWrapper.swift */; };
+		C51AB35B2BC07AFB0063BB01 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB35A2BC07AFB0063BB01 /* SessionView.swift */; };
+		C56D275D2BBEE90600A27A34 /* M6_DiceMaster_2024App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D275C2BBEE90600A27A34 /* M6_DiceMaster_2024App.swift */; };
+		C56D275F2BBEE90600A27A34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D275E2BBEE90600A27A34 /* ContentView.swift */; };
+		C56D27612BBEE90700A27A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56D27602BBEE90700A27A34 /* Assets.xcassets */; };
+		C56D27652BBEE90700A27A34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56D27642BBEE90700A27A34 /* Preview Assets.xcassets */; };
+		C56D27702BBEFFDA00A27A34 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D276F2BBEFFDA00A27A34 /* Dice.swift */; };
+		C56D27742BBF001800A27A34 /* DiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27732BBF001800A27A34 /* DiceType.swift */; };
+		C56D27762BBF024400A27A34 /* DiceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27752BBF024400A27A34 /* DiceSet.swift */; };
+		C56D27782BBF289200A27A34 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27772BBF289200A27A34 /* HomeView.swift */; };
+		C56D277C2BBF290400A27A34 /* DiceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D277B2BBF290400A27A34 /* DiceEditView.swift */; };
+		C56D27802BBF297600A27A34 /* DiceSetDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D277F2BBF297600A27A34 /* DiceSetDetailsView.swift */; };
+		C56D27822BBF297E00A27A34 /* DiceSetEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27812BBF297E00A27A34 /* DiceSetEditView.swift */; };
+		C56D27842BBF299400A27A34 /* DiceAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27832BBF299400A27A34 /* DiceAddView.swift */; };
+		C56D27862BBF29CD00A27A34 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27852BBF29CD00A27A34 /* Session.swift */; };
+		C56D27882BBF2A5500A27A34 /* RollResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27872BBF2A5500A27A34 /* RollResult.swift */; };
+		C56D278A2BBF2B4E00A27A34 /* DiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27892BBF2B4E00A27A34 /* DiceResult.swift */; };
+		C56D278D2BBF393A00A27A34 /* Array<String>+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D278C2BBF393A00A27A34 /* Array<String>+Extension.swift */; };
+		C56D27912BBF3B4F00A27A34 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27902BBF3B4F00A27A34 /* Constants.swift */; };
+		C5D71B6C2BCA35BA00FDBC6A /* DiceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D71B6B2BCA35BA00FDBC6A /* DiceImage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C51AB3512BBF88B20063BB01 /* PageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageWrapper.swift; sourceTree = "<group>"; };
+		C51AB3542BC035530063BB01 /* DiceSetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSetService.swift; sourceTree = "<group>"; };
+		C51AB3562BC071510063BB01 /* DiceListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceListCard.swift; sourceTree = "<group>"; };
+		C51AB3582BC0757C0063BB01 /* ScrollPageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPageWrapper.swift; sourceTree = "<group>"; };
+		C51AB35A2BC07AFB0063BB01 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		C56D27592BBEE90600A27A34 /* M6_DiceMaster_2024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M6_DiceMaster_2024.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C56D275C2BBEE90600A27A34 /* M6_DiceMaster_2024App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M6_DiceMaster_2024App.swift; sourceTree = "<group>"; };
+		C56D275E2BBEE90600A27A34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C56D27602BBEE90700A27A34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C56D27622BBEE90700A27A34 /* M6_DiceMaster_2024.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = M6_DiceMaster_2024.entitlements; sourceTree = "<group>"; };
+		C56D27642BBEE90700A27A34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C56D276F2BBEFFDA00A27A34 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		C56D27732BBF001800A27A34 /* DiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceType.swift; sourceTree = "<group>"; };
+		C56D27752BBF024400A27A34 /* DiceSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSet.swift; sourceTree = "<group>"; };
+		C56D27772BBF289200A27A34 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C56D277B2BBF290400A27A34 /* DiceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceEditView.swift; sourceTree = "<group>"; };
+		C56D277F2BBF297600A27A34 /* DiceSetDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSetDetailsView.swift; sourceTree = "<group>"; };
+		C56D27812BBF297E00A27A34 /* DiceSetEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSetEditView.swift; sourceTree = "<group>"; };
+		C56D27832BBF299400A27A34 /* DiceAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceAddView.swift; sourceTree = "<group>"; };
+		C56D27852BBF29CD00A27A34 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		C56D27872BBF2A5500A27A34 /* RollResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollResult.swift; sourceTree = "<group>"; };
+		C56D27892BBF2B4E00A27A34 /* DiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceResult.swift; sourceTree = "<group>"; };
+		C56D278C2BBF393A00A27A34 /* Array<String>+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array<String>+Extension.swift"; sourceTree = "<group>"; };
+		C56D27902BBF3B4F00A27A34 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C5D71B6B2BCA35BA00FDBC6A /* DiceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceImage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C56D27562BBEE90600A27A34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C51AB3532BC035350063BB01 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C51AB3542BC035530063BB01 /* DiceSetService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C56D27502BBEE90600A27A34 = {
+			isa = PBXGroup;
+			children = (
+				C56D275B2BBEE90600A27A34 /* M6_DiceMaster_2024 */,
+				C56D275A2BBEE90600A27A34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C56D275A2BBEE90600A27A34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C56D27592BBEE90600A27A34 /* M6_DiceMaster_2024.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C56D275B2BBEE90600A27A34 /* M6_DiceMaster_2024 */ = {
+			isa = PBXGroup;
+			children = (
+				C56D276C2BBEE96F00A27A34 /* Components */,
+				C56D27722BBEFFFC00A27A34 /* Enums */,
+				C56D278B2BBF38D400A27A34 /* Extensions */,
+				C56D276D2BBEE97400A27A34 /* Models */,
+				C51AB3532BC035350063BB01 /* Services */,
+				C56D278F2BBF3B4600A27A34 /* Shared */,
+				C56D276B2BBEE96A00A27A34 /* Views */,
+				C56D275C2BBEE90600A27A34 /* M6_DiceMaster_2024App.swift */,
+				C56D275E2BBEE90600A27A34 /* ContentView.swift */,
+				C56D27602BBEE90700A27A34 /* Assets.xcassets */,
+				C56D27622BBEE90700A27A34 /* M6_DiceMaster_2024.entitlements */,
+				C56D27632BBEE90700A27A34 /* Preview Content */,
+			);
+			path = M6_DiceMaster_2024;
+			sourceTree = "<group>";
+		};
+		C56D27632BBEE90700A27A34 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C56D27642BBEE90700A27A34 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C56D276B2BBEE96A00A27A34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C56D277E2BBF291C00A27A34 /* DiceSet */,
+				C56D277D2BBF291500A27A34 /* Dice */,
+				C56D27772BBF289200A27A34 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C56D276C2BBEE96F00A27A34 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C51AB3582BC0757C0063BB01 /* ScrollPageWrapper.swift */,
+				C51AB3512BBF88B20063BB01 /* PageWrapper.swift */,
+				C51AB3562BC071510063BB01 /* DiceListCard.swift */,
+				C5D71B6B2BCA35BA00FDBC6A /* DiceImage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C56D276D2BBEE97400A27A34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C56D276F2BBEFFDA00A27A34 /* Dice.swift */,
+				C56D27752BBF024400A27A34 /* DiceSet.swift */,
+				C56D27852BBF29CD00A27A34 /* Session.swift */,
+				C56D27872BBF2A5500A27A34 /* RollResult.swift */,
+				C56D27892BBF2B4E00A27A34 /* DiceResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C56D27722BBEFFFC00A27A34 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C56D27732BBF001800A27A34 /* DiceType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		C56D277D2BBF291500A27A34 /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				C56D277B2BBF290400A27A34 /* DiceEditView.swift */,
+				C56D27832BBF299400A27A34 /* DiceAddView.swift */,
+			);
+			path = Dice;
+			sourceTree = "<group>";
+		};
+		C56D277E2BBF291C00A27A34 /* DiceSet */ = {
+			isa = PBXGroup;
+			children = (
+				C56D277F2BBF297600A27A34 /* DiceSetDetailsView.swift */,
+				C56D27812BBF297E00A27A34 /* DiceSetEditView.swift */,
+				C51AB35A2BC07AFB0063BB01 /* SessionView.swift */,
+			);
+			path = DiceSet;
+			sourceTree = "<group>";
+		};
+		C56D278B2BBF38D400A27A34 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C56D278C2BBF393A00A27A34 /* Array<String>+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C56D278F2BBF3B4600A27A34 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C56D27902BBF3B4F00A27A34 /* Constants.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C56D27582BBEE90600A27A34 /* M6_DiceMaster_2024 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C56D27682BBEE90700A27A34 /* Build configuration list for PBXNativeTarget "M6_DiceMaster_2024" */;
+			buildPhases = (
+				C56D27552BBEE90600A27A34 /* Sources */,
+				C56D27562BBEE90600A27A34 /* Frameworks */,
+				C56D27572BBEE90600A27A34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = M6_DiceMaster_2024;
+			productName = M6_DiceMaster_2024;
+			productReference = C56D27592BBEE90600A27A34 /* M6_DiceMaster_2024.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C56D27512BBEE90600A27A34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					C56D27582BBEE90600A27A34 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = C56D27542BBEE90600A27A34 /* Build configuration list for PBXProject "M6_DiceMaster_2024" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C56D27502BBEE90600A27A34;
+			productRefGroup = C56D275A2BBEE90600A27A34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C56D27582BBEE90600A27A34 /* M6_DiceMaster_2024 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C56D27572BBEE90600A27A34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C56D27652BBEE90700A27A34 /* Preview Assets.xcassets in Resources */,
+				C56D27612BBEE90700A27A34 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C56D27552BBEE90600A27A34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C56D27822BBF297E00A27A34 /* DiceSetEditView.swift in Sources */,
+				C56D27742BBF001800A27A34 /* DiceType.swift in Sources */,
+				C56D27802BBF297600A27A34 /* DiceSetDetailsView.swift in Sources */,
+				C51AB3592BC0757C0063BB01 /* ScrollPageWrapper.swift in Sources */,
+				C56D27842BBF299400A27A34 /* DiceAddView.swift in Sources */,
+				C56D275F2BBEE90600A27A34 /* ContentView.swift in Sources */,
+				C51AB3522BBF88B20063BB01 /* PageWrapper.swift in Sources */,
+				C56D278A2BBF2B4E00A27A34 /* DiceResult.swift in Sources */,
+				C56D278D2BBF393A00A27A34 /* Array<String>+Extension.swift in Sources */,
+				C56D27912BBF3B4F00A27A34 /* Constants.swift in Sources */,
+				C51AB3552BC035530063BB01 /* DiceSetService.swift in Sources */,
+				C51AB35B2BC07AFB0063BB01 /* SessionView.swift in Sources */,
+				C51AB3572BC071510063BB01 /* DiceListCard.swift in Sources */,
+				C56D27882BBF2A5500A27A34 /* RollResult.swift in Sources */,
+				C56D27702BBEFFDA00A27A34 /* Dice.swift in Sources */,
+				C5D71B6C2BCA35BA00FDBC6A /* DiceImage.swift in Sources */,
+				C56D277C2BBF290400A27A34 /* DiceEditView.swift in Sources */,
+				C56D27862BBF29CD00A27A34 /* Session.swift in Sources */,
+				C56D27782BBF289200A27A34 /* HomeView.swift in Sources */,
+				C56D275D2BBEE90600A27A34 /* M6_DiceMaster_2024App.swift in Sources */,
+				C56D27762BBF024400A27A34 /* DiceSet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C56D27662BBEE90700A27A34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C56D27672BBEE90700A27A34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		C56D27692BBEE90700A27A34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = M6_DiceMaster_2024/M6_DiceMaster_2024.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"M6_DiceMaster_2024/Preview Content\"";
+				DEVELOPMENT_TEAM = KZWJGZQGWZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "TyVaughan.M6-DiceMaster-2024";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C56D276A2BBEE90700A27A34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = M6_DiceMaster_2024/M6_DiceMaster_2024.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"M6_DiceMaster_2024/Preview Content\"";
+				DEVELOPMENT_TEAM = KZWJGZQGWZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "TyVaughan.M6-DiceMaster-2024";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C56D27542BBEE90600A27A34 /* Build configuration list for PBXProject "M6_DiceMaster_2024" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C56D27662BBEE90700A27A34 /* Debug */,
+				C56D27672BBEE90700A27A34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C56D27682BBEE90700A27A34 /* Build configuration list for PBXNativeTarget "M6_DiceMaster_2024" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C56D27692BBEE90700A27A34 /* Debug */,
+				C56D276A2BBEE90700A27A34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C56D27512BBEE90600A27A34 /* Project object */;
+}
