@@ -8,21 +8,62 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var selectedTab = 1
+    @State public var diceSets: [DiceSet] = []
+    
+    @State private var isShowingDiceSetAddView: Bool = false
+    @State private var newDiceSet: DiceSet? = nil
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            
-            DiceEditView(die: Dice.example.d6)
-                .tabItem {
-                    Label("Edit Dice", systemImage: "1.circle")
+        List {
+            ForEach(diceSets) { diceSet in
+                NavigationLink {
+                    DiceSetDetailsView(diceSet: diceSet)
+                } label: {
+                    Text(diceSet.name)
                 }
-                .tag(1)
-            
+            }
+            .onDelete(perform: deleteDiceSet)
+        }
+        .navigationTitle("Dice Sets")
+        .navigationDestination(isPresented: $isShowingDiceSetAddView) {
+            if let newDiceSet = newDiceSet {
+                DiceSetAddView(diceSet: newDiceSet, onSave: addDiceSet)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    newDiceSet = DiceSet(name: "New Dice Set", description: "", dice: [])
+                    isShowingDiceSetAddView = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
         }
     }
+    
+    func addDiceSet(diceSet: DiceSet) -> Void {
+        diceSets.append(diceSet)
+        newDiceSet = nil
+    }
+    
+    func deleteDiceSet(indexSet: IndexSet) -> Void {
+        diceSets.remove(atOffsets: indexSet)
+    }
+
 }
 
 #Preview {
-    HomeView()
+    NavigationStack {
+        HomeView(
+            diceSets: [
+                DiceSet.example,
+                DiceSet.example,
+                DiceSet.example,
+                DiceSet.example,
+                DiceSet.example,
+                DiceSet.example
+            ]
+        )
+    }
 }

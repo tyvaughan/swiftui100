@@ -1,13 +1,13 @@
 //
-//  DiceSetEditView.swift
+//  DiceSetAddView.swift
 //  M6_DiceMaster_2024
 //
-//  Created by  Ty Vaughan on 4/4/24.
+//  Created by  Ty Vaughan on 4/17/24.
 //
 
 import SwiftUI
 
-struct DiceSetEditView: View {
+struct DiceSetAddView: View {
     @Environment(\.dismiss) var dismiss
     @State private var name: String
     @State private var description: String
@@ -17,6 +17,7 @@ struct DiceSetEditView: View {
     @State private var selectedDie: Dice? = nil
     
     var diceSet: DiceSet
+    var onSave: (DiceSet) -> Void
     
     var body: some View {
         Form {
@@ -87,28 +88,42 @@ struct DiceSetEditView: View {
         }
         .navigationTitle($name)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
         .navigationDestination(isPresented: $isShowingDiceDetailsView) {
             DiceEditView(die: selectedDie, allowEdits: true)
         }
         .toolbar {
-            ToolbarItemGroup(placement: .topBarTrailing) {
-                NavigationLink("Edit") {
-                    DiceSetEditView(diceSet: diceSet)
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") {
+                    dismiss()
+                }
+            }
+            ToolbarItem(placement: .primaryAction) {
+                Button("Save") {
+                    dismiss()
+                    diceSet.name = name
+                    diceSet.description = description
+                    diceSet.dice = dice
+                    onSave(diceSet)
                 }
             }
         }
     }
     
-    init(diceSet: DiceSet) {
+    // MARK: Initializers
+    
+    init(diceSet: DiceSet, onSave: @escaping (DiceSet) -> Void) {
         _name = State(initialValue: diceSet.name)
         _description = State(initialValue: diceSet.description)
         _dice = State(initialValue: diceSet.dice)
         self.diceSet = diceSet
+        self.onSave = onSave
     }
+    
 }
 
 #Preview {
     NavigationStack {
-        DiceSetEditView(diceSet: DiceSet.example)
+        DiceSetAddView(diceSet: DiceSet.example, onSave: { _ in })
     }
 }

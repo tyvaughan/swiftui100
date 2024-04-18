@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50573C42BD090D3003B4E9E /* DiceSetAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50573C32BD090D3003B4E9E /* DiceSetAddView.swift */; };
 		C51AB3522BBF88B20063BB01 /* PageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3512BBF88B20063BB01 /* PageWrapper.swift */; };
 		C51AB3552BC035530063BB01 /* DiceSetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3542BC035530063BB01 /* DiceSetService.swift */; };
 		C51AB3572BC071510063BB01 /* DiceListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3562BC071510063BB01 /* DiceListCard.swift */; };
@@ -23,7 +24,6 @@
 		C56D277C2BBF290400A27A34 /* DiceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D277B2BBF290400A27A34 /* DiceEditView.swift */; };
 		C56D27802BBF297600A27A34 /* DiceSetDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D277F2BBF297600A27A34 /* DiceSetDetailsView.swift */; };
 		C56D27822BBF297E00A27A34 /* DiceSetEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27812BBF297E00A27A34 /* DiceSetEditView.swift */; };
-		C56D27842BBF299400A27A34 /* DiceAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27832BBF299400A27A34 /* DiceAddView.swift */; };
 		C56D27862BBF29CD00A27A34 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27852BBF29CD00A27A34 /* Session.swift */; };
 		C56D27882BBF2A5500A27A34 /* RollResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27872BBF2A5500A27A34 /* RollResult.swift */; };
 		C56D278A2BBF2B4E00A27A34 /* DiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56D27892BBF2B4E00A27A34 /* DiceResult.swift */; };
@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C50573C32BD090D3003B4E9E /* DiceSetAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSetAddView.swift; sourceTree = "<group>"; };
 		C51AB3512BBF88B20063BB01 /* PageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageWrapper.swift; sourceTree = "<group>"; };
 		C51AB3542BC035530063BB01 /* DiceSetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSetService.swift; sourceTree = "<group>"; };
 		C51AB3562BC071510063BB01 /* DiceListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceListCard.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		C56D277B2BBF290400A27A34 /* DiceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceEditView.swift; sourceTree = "<group>"; };
 		C56D277F2BBF297600A27A34 /* DiceSetDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSetDetailsView.swift; sourceTree = "<group>"; };
 		C56D27812BBF297E00A27A34 /* DiceSetEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSetEditView.swift; sourceTree = "<group>"; };
-		C56D27832BBF299400A27A34 /* DiceAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceAddView.swift; sourceTree = "<group>"; };
 		C56D27852BBF29CD00A27A34 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C56D27872BBF2A5500A27A34 /* RollResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollResult.swift; sourceTree = "<group>"; };
 		C56D27892BBF2B4E00A27A34 /* DiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceResult.swift; sourceTree = "<group>"; };
@@ -167,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				C56D277B2BBF290400A27A34 /* DiceEditView.swift */,
-				C56D27832BBF299400A27A34 /* DiceAddView.swift */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -178,6 +177,7 @@
 				C56D277F2BBF297600A27A34 /* DiceSetDetailsView.swift */,
 				C56D27812BBF297E00A27A34 /* DiceSetEditView.swift */,
 				C51AB35A2BC07AFB0063BB01 /* SessionView.swift */,
+				C50573C32BD090D3003B4E9E /* DiceSetAddView.swift */,
 			);
 			path = DiceSet;
 			sourceTree = "<group>";
@@ -272,7 +272,6 @@
 				C56D27742BBF001800A27A34 /* DiceType.swift in Sources */,
 				C56D27802BBF297600A27A34 /* DiceSetDetailsView.swift in Sources */,
 				C51AB3592BC0757C0063BB01 /* ScrollPageWrapper.swift in Sources */,
-				C56D27842BBF299400A27A34 /* DiceAddView.swift in Sources */,
 				C56D275F2BBEE90600A27A34 /* ContentView.swift in Sources */,
 				C51AB3522BBF88B20063BB01 /* PageWrapper.swift in Sources */,
 				C56D278A2BBF2B4E00A27A34 /* DiceResult.swift in Sources */,
@@ -288,6 +287,7 @@
 				C56D27862BBF29CD00A27A34 /* Session.swift in Sources */,
 				C56D27782BBF289200A27A34 /* HomeView.swift in Sources */,
 				C56D275D2BBEE90600A27A34 /* M6_DiceMaster_2024App.swift in Sources */,
+				C50573C42BD090D3003B4E9E /* DiceSetAddView.swift in Sources */,
 				C56D27762BBF024400A27A34 /* DiceSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

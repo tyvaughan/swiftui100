@@ -39,7 +39,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2AF1C508-811E-48F9-A728-D225638FA39E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "M6_DiceMaster_2024/Views/DiceSet/DiceSetDetailsView.swift"

@@ -35,6 +35,18 @@ class Dice: Codable, Identifiable {
 
 }
 
+// MARK: - +Hashable
+extension Dice: Hashable {
+    static func == (lhs: Dice, rhs: Dice) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+
 // MARK: - Example
 extension Dice {
     struct example {

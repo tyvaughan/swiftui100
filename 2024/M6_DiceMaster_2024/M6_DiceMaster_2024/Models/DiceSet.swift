@@ -50,9 +50,11 @@ class DiceSet: Codable, Identifiable {
 
 // MARK: - Example
 extension DiceSet {
-    static let example = DiceSet(
-        name: "D&D Dice Set",
-        description: "These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D.",
-        dice: [Dice.example.d4, Dice.example.d6, Dice.example.d8, Dice.example.d10, Dice.example.d12, Dice.example.d20]
-    )
+    static var example: DiceSet {
+        return DiceSet(
+            name: "D&D Dice Set",
+            description: "These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D.",
+            dice: [Dice.example.d4, Dice.example.d6, Dice.example.d8, Dice.example.d10, Dice.example.d12, Dice.example.d20]
+        )
+    }
 }
