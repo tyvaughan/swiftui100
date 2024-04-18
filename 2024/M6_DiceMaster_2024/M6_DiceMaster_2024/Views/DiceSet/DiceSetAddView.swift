@@ -5,10 +5,12 @@
 //  Created by  Ty Vaughan on 4/17/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct DiceSetAddView: View {
     @Environment(\.dismiss) var dismiss
+
     @State private var name: String
     @State private var description: String
     @State private var dice: [Dice]
@@ -39,16 +41,7 @@ struct DiceSetAddView: View {
                             .font(.title)
                         Spacer()
                         Button {
-                            dice.append(
-                                Dice(
-                                    name: "New die",
-                                    type: .d6,
-                                    sides: Array(0...DiceType.d6.rawValue).map { String($0) },
-                                    dieColor: .white,
-                                    fontColor: .black
-                                )
-                            )
-                            print(dice.count)
+                            addDie()
                         } label: {
                             Image(systemName: "plus")
                         }
@@ -90,7 +83,9 @@ struct DiceSetAddView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
         .navigationDestination(isPresented: $isShowingDiceDetailsView) {
-            DiceEditView(die: selectedDie, allowEdits: true)
+            if let selectedDie = selectedDie {
+                DiceEditView(die: selectedDie, allowEdits: true)
+            }
         }
         .toolbar {
             ToolbarItem(placement: .cancellationAction) {
@@ -102,7 +97,7 @@ struct DiceSetAddView: View {
                 Button("Save") {
                     dismiss()
                     diceSet.name = name
-                    diceSet.description = description
+                    diceSet.context = description
                     diceSet.dice = dice
                     onSave(diceSet)
                 }
@@ -114,16 +109,31 @@ struct DiceSetAddView: View {
     
     init(diceSet: DiceSet, onSave: @escaping (DiceSet) -> Void) {
         _name = State(initialValue: diceSet.name)
-        _description = State(initialValue: diceSet.description)
+        _description = State(initialValue: diceSet.context)
         _dice = State(initialValue: diceSet.dice)
         self.diceSet = diceSet
         self.onSave = onSave
     }
     
+    func addDie() -> Void {
+        dice.append(
+            Dice(
+                name: "New die",
+                type: .d6,
+                sides: Array(1...DiceType.d6.rawValue).map { String($0) },
+                dieColor: .white,
+                valueColor: .black
+            )
+        )
+    }
 }
 
 #Preview {
     NavigationStack {
         DiceSetAddView(diceSet: DiceSet.example, onSave: { _ in })
     }
+    .modelContainer(for: [
+        Dice.self,
+        DiceSet.self
+    ], inMemory: true)
 }

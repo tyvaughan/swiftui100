@@ -5,10 +5,12 @@
 //  Created by  Ty Vaughan on 4/4/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct DiceSetEditView: View {
     @Environment(\.dismiss) var dismiss
+
     @State private var name: String
     @State private var description: String
     @State private var dice: [Dice]
@@ -38,16 +40,7 @@ struct DiceSetEditView: View {
                             .font(.title)
                         Spacer()
                         Button {
-                            dice.append(
-                                Dice(
-                                    name: "New die",
-                                    type: .d6,
-                                    sides: Array(0...DiceType.d6.rawValue).map { String($0) },
-                                    dieColor: .white,
-                                    fontColor: .black
-                                )
-                            )
-                            print(dice.count)
+                            addDie()
                         } label: {
                             Image(systemName: "plus")
                         }
@@ -87,13 +80,22 @@ struct DiceSetEditView: View {
         }
         .navigationTitle($name)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
         .navigationDestination(isPresented: $isShowingDiceDetailsView) {
-            DiceEditView(die: selectedDie, allowEdits: true)
+            if let selectedDie = selectedDie {
+                DiceEditView(die: selectedDie, allowEdits: true)
+            }
         }
         .toolbar {
-            ToolbarItemGroup(placement: .topBarTrailing) {
-                NavigationLink("Edit") {
-                    DiceSetEditView(diceSet: diceSet)
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Save") {
+                    onSave()
+                    dismiss()
+                }
+            }
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") {
+                    dismiss()
                 }
             }
         }
@@ -101,14 +103,38 @@ struct DiceSetEditView: View {
     
     init(diceSet: DiceSet) {
         _name = State(initialValue: diceSet.name)
-        _description = State(initialValue: diceSet.description)
+        _description = State(initialValue: diceSet.context)
         _dice = State(initialValue: diceSet.dice)
         self.diceSet = diceSet
     }
+    
+    func addDie() -> Void {
+        dice.append(
+            Dice(
+                name: "New die",
+                type: .d6,
+                sides: Array(1...DiceType.d6.rawValue).map { String($0) },
+                dieColor: .white,
+                valueColor: .black
+            )
+        )
+    }
+    
+    func onSave() -> Void {
+        // SwiftData auto-saves on changes
+        diceSet.name = name
+        diceSet.context = description
+        diceSet.dice = dice
+    }
+
 }
 
 #Preview {
     NavigationStack {
         DiceSetEditView(diceSet: DiceSet.example)
     }
+    .modelContainer(for: [
+        Dice.self,
+        DiceSet.self
+    ], inMemory: true)
 }

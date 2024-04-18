@@ -6,18 +6,47 @@
 //
 
 import Foundation
+import SwiftData
 
+@Model
 class DiceSet: Codable, Identifiable {
     public var id: UUID = UUID()
     public var name: String
-    public var description: String
-    public var dice: [Dice]
+    public var context: String
+    @Relationship(deleteRule: .cascade) public var dice: [Dice]
     
     init(name: String, description: String, dice: [Dice]) {
         self.name = name
-        self.description = description
+        self.context = description
         self.dice = dice
     }
+    
+    // MARK: SwiftData Codable support
+    
+    enum CodingKeys: CodingKey {
+        case id
+        case name
+        case context
+        case dice
+    }
+    
+    required init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(UUID.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        context = try container.decode(String.self, forKey: .context)
+        dice = try container.decode([Dice].self, forKey: .dice)
+    }
+    
+    func encode(to encoder: any Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
+        try container.encode(context, forKey: .context)
+        try container.encode(dice, forKey: .dice)
+    }
+    
+    // MARK: methods
 
     /**
      Adds a die to the set of dice.
@@ -26,16 +55,6 @@ class DiceSet: Codable, Identifiable {
     func add(die: Dice) -> Void {
         dice.append(die)
     }
-    
-//    /**
-//     Updates a die in the current dice set
-//     - Parameter die: the dice to be updated
-//     */
-//    func edit(die: Dice) -> Void {
-//        if let index = dice.firstIndex(where: { d in d.id == die.id }) {
-//            dice[index] = die
-//        }
-//    }
     
     /**
      Removes a die from the set of dice
@@ -54,7 +73,7 @@ extension DiceSet {
         return DiceSet(
             name: "D&D Dice Set",
             description: "These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D. These dice are used to play D&D.",
-            dice: [Dice.example.d4, Dice.example.d6, Dice.example.d8, Dice.example.d10, Dice.example.d12, Dice.example.d20]
+            dice: []
         )
     }
 }

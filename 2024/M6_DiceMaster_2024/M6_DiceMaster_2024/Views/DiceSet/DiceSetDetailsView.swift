@@ -5,6 +5,7 @@
 //  Created by  Ty Vaughan on 4/4/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct DiceSetDetailsView: View {
@@ -21,7 +22,7 @@ struct DiceSetDetailsView: View {
                      */
                     HStack {
                         VStack(alignment: .leading) {
-                            Text(diceSet.description)
+                            Text(diceSet.context)
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -110,4 +111,8 @@ struct DiceSetDetailsView: View {
     NavigationStack {
         DiceSetDetailsView(diceSet: DiceSet.example)
     }
+    .modelContainer(for: [
+        Dice.self,
+        DiceSet.self
+    ], inMemory: true)
 }

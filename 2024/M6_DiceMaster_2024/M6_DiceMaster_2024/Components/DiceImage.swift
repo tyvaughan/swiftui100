@@ -33,9 +33,10 @@ struct DiceImage: View {
             Image(systemName: image)
                 .resizable()
                 .frame(width: 30, height: 30)
-                .foregroundStyle(.white)
+                .foregroundStyle(Color(hex: die.dieColor))
                 .shadow(radius: 4)
             Text(value ?? die.sides[die.sides.count - 1])
+                .foregroundStyle(Color(hex: die.valueColor))
         }
     }
 

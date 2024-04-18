@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C50573C42BD090D3003B4E9E /* DiceSetAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50573C32BD090D3003B4E9E /* DiceSetAddView.swift */; };
+		C50573C62BD0A92E003B4E9E /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50573C52BD0A92E003B4E9E /* Color+Codable.swift */; };
 		C51AB3522BBF88B20063BB01 /* PageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3512BBF88B20063BB01 /* PageWrapper.swift */; };
 		C51AB3552BC035530063BB01 /* DiceSetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3542BC035530063BB01 /* DiceSetService.swift */; };
 		C51AB3572BC071510063BB01 /* DiceListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AB3562BC071510063BB01 /* DiceListCard.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		C50573C32BD090D3003B4E9E /* DiceSetAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSetAddView.swift; sourceTree = "<group>"; };
+		C50573C52BD0A92E003B4E9E /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
 		C51AB3512BBF88B20063BB01 /* PageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageWrapper.swift; sourceTree = "<group>"; };
 		C51AB3542BC035530063BB01 /* DiceSetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceSetService.swift; sourceTree = "<group>"; };
 		C51AB3562BC071510063BB01 /* DiceListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceListCard.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C56D278C2BBF393A00A27A34 /* Array<String>+Extension.swift */,
+				C50573C52BD0A92E003B4E9E /* Color+Codable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				C56D278A2BBF2B4E00A27A34 /* DiceResult.swift in Sources */,
 				C56D278D2BBF393A00A27A34 /* Array<String>+Extension.swift in Sources */,
 				C56D27912BBF3B4F00A27A34 /* Constants.swift in Sources */,
+				C50573C62BD0A92E003B4E9E /* Color+Codable.swift in Sources */,
 				C51AB3552BC035530063BB01 /* DiceSetService.swift in Sources */,
 				C51AB35B2BC07AFB0063BB01 /* SessionView.swift in Sources */,
 				C51AB3572BC071510063BB01 /* DiceListCard.swift in Sources */,

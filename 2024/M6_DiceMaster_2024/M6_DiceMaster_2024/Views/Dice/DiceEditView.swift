@@ -5,21 +5,23 @@
 //  Created by  Ty Vaughan on 4/4/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct DiceEditView: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.modelContext) var modelContext
     
     @State private var name: String
     @State private var type: DiceType
     @State private var sides: [String]
     
-    @State private var dieColor = Color.white
-    @State private var valueColor = Color.black
+    @State private var dieColor: Color
+    @State private var valueColor: Color
     
     @State private var allowEdits = false
     
-    public var die: Dice?
+    public var die: Dice
     
     var displayValue: String {
         sides.count > 0 && !sides[0].trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? sides[0] : "Value"
@@ -73,13 +75,13 @@ struct DiceEditView: View {
             if allowEdits {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
-                        // TODO: save updates to the dice
+                        onSave()
                         allowEdits = false
                     }
                 }
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") {
-                        resetForm()
+                        onReset()
                         allowEdits = false
                     }
                 }
@@ -94,26 +96,29 @@ struct DiceEditView: View {
         }
     }
     
-    init(die: Dice?, allowEdits: Bool = false) {
-        self.name = die?.name ?? ""
-        self.type = die?.type ?? K.Defaults.Dice.type
-        self.sides = die?.sides ?? Array(repeating: "n/a", count: K.Defaults.Dice.type.rawValue)
-        self.die = die
-        self.allowEdits = allowEdits
-    }
-    
     init(die: Dice, allowEdits: Bool = false) {
         self.name = die.name
         self.type = die.type
         self.sides = die.sides
+        self.dieColor = Color(hex: die.dieColor)
+        self.valueColor = Color(hex: die.valueColor)
         self.die = die
         self.allowEdits = allowEdits
     }
     
-    func resetForm() -> Void {
-        self.name = die?.name ?? ""
-        self.type = die?.type ?? K.Defaults.Dice.type
-        self.sides = die?.sides ?? Array(repeating: "n/a", count: K.Defaults.Dice.type.rawValue)
+    func onSave() -> Void {
+        // SwiftData auto-saves on changes
+        die.name = name
+        die.type = type
+        die.sides = sides
+        die.dieColor = dieColor.toHex!
+        die.valueColor = valueColor.toHex!
+    }
+    
+    func onReset() -> Void {
+        self.name = die.name
+        self.type = die.type
+        self.sides = die.sides
     }
     
     func updateSides() -> Void {
@@ -123,6 +128,10 @@ struct DiceEditView: View {
 
 #Preview {
     NavigationStack {
-        DiceEditView(die: Dice.example.d6, allowEdits: false)
+        DiceEditView(die: Dice.example.d4, allowEdits: true)
     }
+    .modelContainer(for: [
+        Dice.self,
+        DiceSet.self
+    ], inMemory: true)
 }

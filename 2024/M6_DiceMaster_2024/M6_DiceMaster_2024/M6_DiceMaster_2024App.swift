@@ -13,5 +13,9 @@ struct M6_DiceMaster_2024App: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [
+            Dice.self,
+            DiceSet.self
+        ])
     }
 }

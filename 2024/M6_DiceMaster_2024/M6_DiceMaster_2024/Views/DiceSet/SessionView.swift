@@ -5,6 +5,7 @@
 //  Created by  Ty Vaughan on 4/5/24.
 //
 
+import SwiftData
 import SwiftUI
 
 struct SessionView: View {
@@ -67,7 +68,7 @@ struct SessionView: View {
             }
         }
         print(diceResults)
-        rollResults.append(RollResult(results: diceResults, date: .now))
+        rollResults.insert(RollResult(results: diceResults, date: .now), at: 0)
     }
 }
 
@@ -75,4 +76,8 @@ struct SessionView: View {
     NavigationStack {
         SessionView(diceSet: DiceSet.example)
     }
+    .modelContainer(for: [
+        Dice.self,
+        DiceSet.self
+    ], inMemory: true)
 }
