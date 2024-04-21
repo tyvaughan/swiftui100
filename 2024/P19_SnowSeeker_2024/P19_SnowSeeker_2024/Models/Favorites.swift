@@ -9,16 +9,12 @@ import Foundation
 import SwiftUI
 
 @Observable
-class Favorites {
+class Favorites: Codable {
     private var resorts: Set<String>
     
-    private let key = "Favorites"
-    
     init() {
-        // load our saved data
-        
-        // still here? Use an empty array
         resorts = []
+        resorts = load()
     }
     
     func contains(_ resort: Resort) -> Bool {
@@ -35,8 +31,18 @@ class Favorites {
         save()
     }
     
-    func save() {
-        // write out our data
+    // MARK: Persistence methods
+    
+    private func load() -> Set<String> {
+        if let savedData: [String] = FileManager().decode(K.favoritesFile, isFatal: false) {
+            return Set(savedData)
+        } else {
+            return []
+        }
+    }
+    
+    private func save() {
+        FileManager().encode(K.favoritesFile, data: resorts)
     }
     
 }

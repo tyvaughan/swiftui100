@@ -14,6 +14,9 @@
 		C50D1C7B2BD349EC002CB1F0 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D1C7A2BD349EC002CB1F0 /* ResortView.swift */; };
 		C50D1C7D2BD34B56002CB1F0 /* SkiDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D1C7C2BD34B56002CB1F0 /* SkiDetailsView.swift */; };
 		C50D1C7F2BD34C0A002CB1F0 /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D1C7E2BD34C0A002CB1F0 /* ResortDetailsView.swift */; };
+		C50D2EBD2BD4BF9F002F1DD6 /* ImageCredit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D2EBC2BD4BF9F002F1DD6 /* ImageCredit.swift */; };
+		C50D2EC02BD4C2B2002F1DD6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D2EBF2BD4C2B2002F1DD6 /* Constants.swift */; };
+		C50D2EC22BD4C708002F1DD6 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D2EC12BD4C708002F1DD6 /* FileManager+Extensions.swift */; };
 		C51C31982BD3F97700B9EE8C /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51C31972BD3F97700B9EE8C /* Facility.swift */; };
 		C51C319A2BD3FD1700B9EE8C /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51C31992BD3FD1700B9EE8C /* Favorites.swift */; };
 		C5916B102BD1F30F006F9FFA /* P19_SnowSeeker_2024App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5916B0F2BD1F30F006F9FFA /* P19_SnowSeeker_2024App.swift */; };
@@ -35,6 +38,9 @@
 		C50D1C7A2BD349EC002CB1F0 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 		C50D1C7C2BD34B56002CB1F0 /* SkiDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiDetailsView.swift; sourceTree = "<group>"; };
 		C50D1C7E2BD34C0A002CB1F0 /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
+		C50D2EBC2BD4BF9F002F1DD6 /* ImageCredit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCredit.swift; sourceTree = "<group>"; };
+		C50D2EBF2BD4C2B2002F1DD6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C50D2EC12BD4C708002F1DD6 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
 		C51C31972BD3F97700B9EE8C /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
 		C51C31992BD3FD1700B9EE8C /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		C5916B0C2BD1F30F006F9FFA /* P19_SnowSeeker_2024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P19_SnowSeeker_2024.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +71,25 @@
 			isa = PBXGroup;
 			children = (
 				C50D1C762BD34636002CB1F0 /* Bundle-Decodable.swift */,
+				C50D2EC12BD4C708002F1DD6 /* FileManager+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C50D2EBB2BD4BF58002F1DD6 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C50D2EBC2BD4BF9F002F1DD6 /* ImageCredit.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		C50D2EBE2BD4C2A4002F1DD6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C50D2EBF2BD4C2B2002F1DD6 /* Constants.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		C5916B032BD1F30F006F9FFA = {
@@ -92,7 +115,9 @@
 				C5916B2A2BD2146A006F9FFA /* Components */,
 				C50D1C752BD34628002CB1F0 /* Extensions */,
 				C5916B2B2BD2146E006F9FFA /* Models */,
+				C50D2EBE2BD4C2A4002F1DD6 /* Shared */,
 				C5916B292BD21465006F9FFA /* Views */,
+				C50D2EBB2BD4BF58002F1DD6 /* ViewModifiers */,
 				C5916B0F2BD1F30F006F9FFA /* P19_SnowSeeker_2024App.swift */,
 				C5916B112BD1F30F006F9FFA /* ContentView.swift */,
 				C5916B132BD1F310006F9FFA /* Assets.xcassets */,
@@ -223,6 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5916B262BD20AF2006F9FFA /* MakeSwiftUIViewSearchable.swift in Sources */,
+				C50D2EC02BD4C2B2002F1DD6 /* Constants.swift in Sources */,
+				C50D2EBD2BD4BF9F002F1DD6 /* ImageCredit.swift in Sources */,
 				C5916B122BD1F30F006F9FFA /* ContentView.swift in Sources */,
 				C5916B242BD200C5006F9FFA /* GroupsAsTransparentLayoutContainers.swift in Sources */,
 				C51C319A2BD3FD1700B9EE8C /* Favorites.swift in Sources */,
@@ -237,6 +264,7 @@
 				C50D1C772BD34636002CB1F0 /* Bundle-Decodable.swift in Sources */,
 				C51C31982BD3F97700B9EE8C /* Facility.swift in Sources */,
 				C5916B202BD1F92D006F9FFA /* TwoSideBySideViews.swift in Sources */,
+				C50D2EC22BD4C708002F1DD6 /* FileManager+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
